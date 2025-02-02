@@ -5,6 +5,23 @@ body {
     background-color: #fdfdfd;
 }
 
+.page-header {
+    top: 0;
+    width: 100%;
+    display: flex;
+    margin-top: 0;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 9999;
+    background-color: rgb(100, 220, 145);
+}
+
+.wrapper {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
 h1, h2 {
     color: #333;
 }
@@ -13,9 +30,16 @@ form {
     margin-bottom: 20px;
 }
 
-pre {
+.result_text_area {
     background-color: #f4f4f4;
     padding: 10px;
     border: 1px solid #ccc;
     white-space: pre-wrap;
+}
+
+
+.page-footer {
+    background-color: rgb(100, 220, 145);
+    color: white;
+    text-align: center;
 }
