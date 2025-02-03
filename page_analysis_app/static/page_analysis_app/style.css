@@ -1,5 +1,8 @@
 
 body {
+    position: absolute;
+    top: 10%;
+    width: 100%;
     font-family: Arial, sans-serif;
     margin: 20px;
     background-color: #fdfdfd;
@@ -28,6 +31,20 @@ h1, h2 {
 
 form {
     margin-bottom: 20px;
+}
+
+input {
+    z-index: 9999;
+    background-color: lightgrey;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.analize {
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 0 1px 1px black;
 }
 
 .result_text_area {

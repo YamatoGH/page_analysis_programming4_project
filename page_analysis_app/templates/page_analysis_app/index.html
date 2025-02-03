@@ -3,15 +3,19 @@
     <head>
         <meta charset="UTF-8">
         <title>ページ分析アプリ - t-SNE可視化</title>
+        <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Philospher" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
         {% load static %}
         <link rel="stylesheet" href="{% static 'page_analysis_app/style.css' %}">
     </head>
+
+    <header class="page-header wrapper">  
+        <h1>プログラミング4の課題</h1>
+        <a href="https://133.102.45.60:80/~s5023155/">自己紹介トップに戻る</a>
+    </header>
+
     <body>
-        <header class="page-header wrapper">  
-            <h1>プログラミング4の課題</h1>
-            <a href="./images/gallery.html">ギャラリーページ</a>
-            <a href="0606.html">第14回の課題ページ</a>
-        </header>
 
         <h1>ページ分析アプリ - t-SNE可視化</h1>
 
@@ -23,7 +27,7 @@
             {% csrf_token %}
             <label for="url">URLを入力してください:</label><br>
             <input type="url" name="url" id="url" required style="width: 300px;"><br><br>
-            <button type="submit">解析する</button>
+            <button class="analize" type="submit">解析する</button>
         </form>
 
         {% if result_text %}
@@ -32,10 +36,10 @@
         {% endif %}
 
         {% if plot_image %}
-            <h2>Word2Vecのt-SNE可視化</h2>
+            <h2>使われている単語の可視化(word2vec訓練後、t-sneで2次元にして可視化)</h2>
             <img src="data:image/png;base64,{{ plot_image }}" alt="t-SNE Plot">
         {% endif %}
-        
+
         <footer class="page-footer">©2024　 Takeuchi Yamato</footer>
     </body>
 </html>
